@@ -1,0 +1,42 @@
+body {
+	background-color: #f4aa42;
+}
+
+#header {
+	text-align: center;
+	padding: 40px;
+}
+
+#burgerpic {
+	max-height: 150px;
+}
+
+.devour {
+	position: absolute;
+	right: 2px;
+	top: 2px;
+	bottom: 2px;
+}
+
+#testp {
+	position: relative;
+	height: 30px;
+}
+
+#formdiv {
+	text-align: center;
+	padding: 40px;
+}
+
+.burger_uneaten {
+	background-color: #ffffff;
+	margin: 5px;
+/*	overflow: auto;
+	padding-top: 5px;
+	padding-bottom: 5px;*/
+}
+
+.burger_eaten {
+	background-color: #e5e5e5;
+	margin: 5px;
+}

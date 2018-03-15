@@ -1,3 +1,82 @@
-I N D E X . H A N D L E B A R S
-Contains template that handlebars can render onto
-Create a button that will submit user input into the database
+<div class="row" id="header">
+	
+	<div class="col-md-12">
+
+		<img id="burgerpic" src="/assets/img/burger.png" alt="burger">
+
+		<h1>EAT-DA-BURGER</h1>
+		<hr>
+
+	</div>	
+
+</div>
+
+<div class="row" id="burgerrow">
+
+	<div class="col-md-2"></div>
+
+	<div class="col-md-4" id="uneaten">
+
+		<h3>Uneaten Burgers</h3>
+		<hr>
+
+		{{#each burgers}}
+
+			{{#unless devoured}}
+				<div class="burger burger_uneaten">
+					<p id="testp">{{id}}. {{burger_name}} <button class="devour" data-id="{{id}}">Devour It!</button></p>
+					
+				</div>
+			{{/unless}}
+
+		{{/each}}
+
+	</div>
+
+	<div class="col-md-4" id="eaten">
+
+		<h3>Burgers You Devoured</h3>
+		<hr>
+
+		{{#each burgers}}
+
+			{{#if devoured}}
+				<div class="burger burger_eaten">
+					<p>{{id}}. {{burger_name}}</p>
+				</div>
+			{{/if}}
+
+		{{/each}}
+
+	</div>
+
+	<div class="col-md-2"></div>
+
+</div>
+
+<div class="row">
+
+	<div class="col-md-4"></div>
+
+	<div class="col-md-4" id="formdiv">
+
+		<h3>Add A Burger</h3>
+
+		<form class="burger-form">
+
+			<div class="form-group">
+				<label for="newburger">Burger Name:</label>
+				<br>
+				<input type="text" id="newburger" name="newburger">
+			</div>
+
+			<button type="submit" id="submit">Add Burger</button>
+
+		</form>
+
+	</div>
+
+	<div class="col-md-4"></div>
+
+</div>
+
